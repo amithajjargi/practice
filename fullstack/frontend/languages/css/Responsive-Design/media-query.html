@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><h1>Media Query</h1></p>
+    <p><h2>Def of Media Query:-</h2></p>
+    <p style="color: cadetblue; font-style: italic;"> The Media query in CSS is used to create a responsive web design. It means that the view of a web page differs from system to system based on screen or media types. The breakpoint specifies for what device-width size, the content is just starting to break or deform. </p>
+    <h3>Responsive Web Design - Media Queries
+        What is a Media Query?</h3>
+    <p> 1.Media query is a CSS technique introduced in CSS3.
+        <br>
+        2.Add a Breakpoint. 
+       <br>
+        3.Always Design for Mobile First. 
+       <br>
+        4.Typical Device Breakpoints. 
+       <br>
+        5.Orientation: Portrait / Landscape. 
+       <br>
+        6.Hide Elements With Media Queries. 
+      <br>
+        7.Change Font Size With Media Queries.</p>
+    
+    <style>
+        .john{
+            font-size: 40px;
+            color: rgb(39, 1, 1);
+            background-color: rgba(91, 31, 31, 0.307);
+            display: none;
+        }
+@media ( max-width:450px){
+    #john-1{
+        display: block;
+        background-color: green;
+    }
+}
+@media ( min-width:451px) and (max-width:650px){
+    #john-2{
+        display: block;
+        background-color: rgb(0, 119, 128);
+    }
+}
+@media ( min-width:651px) and (max-width:1051px){
+    #john-3{
+        display: block;
+        background-color: rgb(0, 21, 128);
+    }
+}
+@media ( min-width:1052px){
+    #john-4{
+        display: block;
+        background-color: rgb(250, 110, 45);
+    }
+}
+    </style>
+ <div id="john-1" class="item">mobile phone size 0px to 450px</div>
+ <div id="john-2" class="kohli">tablets size 451px to 650px</div>
+ <div id="john-3" class="kapoor">desktop size  651px to 1051px</div>
+ <h1><div id="john-4" class="sina">large Tv size is 1052px </div>
+ </h1>
+</body>
+</html>

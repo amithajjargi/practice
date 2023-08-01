@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><h1>Flex</h1></p>
+    <p><h2 style="color: black;">Def of Flex:-</h2></p>
+    <p style="color: rgb(134, 141, 138);">The flex CSS shorthand property is the combination of flex-grow, flex-shrink, and flex-basis properties</p>
+    <img src="./fleximg.1" alt="">
+    <p><h2>Importance of flex in CSS</h2></p>
+    <p style="color: brown;">1.It is used to set the length of flexible items.
+        <br>
+       2.The flex property is much more responsive and mobile-friendly.
+       <br>
+       3.It is easy to position child elements and the main container.
+       <br> 
+       4.The margin doesn't collapse with the content margins.</p>
+
+    <style>
+        #container{
+            color: rgb(19, 10, 10);
+            
+            height: 900px;
+            border: 2px solid rgb(92, 71, 169);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item{
+width: 250px;
+height: 250px;
+background-color: rgb(40, 173, 42);
+margin: 20px;
+        }
+    </style>
+    <div id="container">
+
+        <h1 id="Virat" class="item" style="color: antiquewhite; font-style: italic;">virat</h1>
+        <h1 id="Sohli" class="item" style="color: rgb(70, 69, 72); font-style: oblique;">Kohli</h1>
+        <h1 id="Sharuk" class="item" style="color: cadetblue; font-style: inherit;">Sharuk</h1>
+        <h1 id="Khan" class="item" style="color: cornflowerblue; font-style: oblique;">Khan</h1>
+        <h1 id="Deepika" class="item" style="color: greenyellow; font-style: italic;">Deepika</h1>
+        <h1 id="Padukone" class="item" style="color: aqua;">Padukone</h1>
+
+    </div>
+</body>
+</html>
