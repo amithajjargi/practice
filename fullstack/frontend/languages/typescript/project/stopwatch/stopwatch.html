@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .stopwatch {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+  }
+</style>
+</head>
+<body>
+
+<div class="stopwatch">
+  <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">00</span>
+</div>
+<button id="startStopButton">Start</button>
+<button id="resetButton">Reset</button>
+
+<script>
+  var startTime;
+  var interval;
+
+  function updateTimer() {
+    var currentTime = new Date().getTime();
+    var elapsedTime = currentTime - startTime;
+
+    var minutes = Math.floor(elapsedTime / (60 * 1000));
+    var seconds = Math.floor((elapsedTime % (60 * 1000)) / 1000);
+    var milliseconds = elapsedTime % 1000;
+
+    document.getElementById("minutes").textContent = padTime(minutes);
+    document.getElementById("seconds").textContent = padTime(seconds);
+    document.getElementById("milliseconds").textContent = padTime(milliseconds, 3);
+  }
+
+  function padTime(time, length = 2) {
+    return String(time).padStart(length, '0');
+  }
+
+  document.getElementById("startStopButton").addEventListener("click", function() {
+    if (interval) {
+      clearInterval(interval);
+      interval = null;
+      this.textContent = "Start";
+    } else {
+      startTime = new Date().getTime() - (startTime || 0);
+      interval = setInterval(updateTimer, 10);
+      this.textContent = "Stop";
+    }
+  });
+
+  document.getElementById("resetButton").addEventListener("click", function() {
+    clearInterval(interval);
+    interval = null;
+    document.getElementById("minutes").textContent = "00";
+    document.getElementById("seconds").textContent = "00";
+    document.getElementById("milliseconds").textContent = "00";
+    document.getElementById("startStopButton").textContent = "Start";
+  });
+</script>
+
+</body>
+</html>

@@ -28,12 +28,24 @@ function displayProducts(){
 
 
     myproducts.map((item)=>{
+        let image=document.createElement('video')
+        image.src=item.videos
+        image.style.width="200px"
+        image.style.height="200px"
+        image.controls=true
+        div.appendChild(image)
+    })
+
+    myproducts.map((item)=>{
         let image=document.createElement('img')
         image.src=item.image
         image.style.width="200px"
         image.style.height="200px"
+        image.controls=true
         div.appendChild(image)
     })
-
     
+
+
+
 }
