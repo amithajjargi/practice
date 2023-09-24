@@ -44,10 +44,8 @@ console.log("newValue",typeof newValue)
           </TabList>
         </Box>
         
-        <h1>Def of Props</h1>
-        <p> type of object where the value of attributes of a tag is stored. The word “props” implies “properties”, and its working functionality is quite similar to HTML attributes. Basically, these props components are read-only components</p>
         
-        1.MyLabels<Mylabels/>
+        <Mylabels/>
         <TabPanel value="1"><MyProps/></TabPanel>
         <TabPanel value="2"><H1/></TabPanel>
         <TabPanel value="3">
