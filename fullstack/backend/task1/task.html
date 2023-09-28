@@ -1,0 +1,13 @@
+<script>
+    let item = [2, 2, 3, 3, 6, 6, 9, 9]
+    console.log("Original Array:", item);
+
+    let data = item.reduce((result, currentValue) => {
+        if (!result.includes(currentValue)) {
+            result.push(currentValue);
+        }
+        return result;
+    }, []);
+
+    console.log("Array with Duplicates Removed:", data);
+</script>
